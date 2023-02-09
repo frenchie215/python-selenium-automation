@@ -11,6 +11,9 @@ driver.get('https://www.amazon.com/')
 
 driver.find_element(By.XPATH, "//span[text()='& Orders']").click()
 
+sleep(4)
+
+
 expected_result= '"Sign In"'
 actual_result = driver.find_element(By.XPATH, "//h1[@class='a-spacing-small']")
 print(actual_result)
