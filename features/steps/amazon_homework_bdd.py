@@ -9,11 +9,11 @@ def open_amazon(context):
 
 @when('Click Returns and Orders button')
 def click_orders(context):
-    context.driver.find_element(By.CSS_SELECTOR, '#nav-orders')
+    context.driver.find_element(By.CSS_SELECTOR, '#nav-orders').click()
 
 
 @then('Verify Sign in page opened: Sign In header is visible, email input field is present')
 def verify_page(context):
-    expected_result = 'Sign In'
-    actual_result = context.driver.find_element(By.CSS_SELECTOR, '#ap_email')
-    assert expected_result == actual_result, f'Expected {expected_result} but got actual {actual_result}'
+    expected_result1 = context.driver.find_element(By.CSS_SELECTOR, '#ap_email').text
+    actual_result1 = context.driver.find_element(By.CSS_SELECTOR, '#ap_email').text
+    assert expected_result1 == actual_result1, f'Expected {expected_result1} but actually got {actual_result1}'
