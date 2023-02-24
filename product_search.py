@@ -11,6 +11,7 @@ SEARCH_SUBMIT = (By.NAME, 'btnK')
 def open_google(context):
     context.driver.get('https://www.google.com/')
 
+    sleep(4)
 
 @when('Input {search_word} into search field')
 def input_search(context, search_word):
